@@ -1,4 +1,3 @@
-// lib/screens/auth/forgot_password_screen.dart
 import 'package:flutter/material.dart';
 import '../../services/auth_service.dart';
 
