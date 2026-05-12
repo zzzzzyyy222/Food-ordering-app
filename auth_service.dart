@@ -7,7 +7,6 @@ class AuthService {
 
   Stream<User?> get authStateChanges => _auth.authStateChanges();
 
-  // Sign Up
   Future<String?> signUp(String email, String password) async {
     try {
       await _auth.createUserWithEmailAndPassword(
@@ -20,7 +19,6 @@ class AuthService {
     }
   }
 
-  // Login
   Future<String?> login(String email, String password) async {
     try {
       await _auth.signInWithEmailAndPassword(
@@ -33,7 +31,6 @@ class AuthService {
     }
   }
 
-  // Forgot Password
   Future<String?> sendPasswordResetEmail(String email) async {
     try {
       await _auth.sendPasswordResetEmail(email: email);
