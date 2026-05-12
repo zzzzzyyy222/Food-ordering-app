@@ -161,7 +161,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           child: CustomScrollView(
             slivers: [
 
-              // ── Header ────────────────────────────────────────
               SliverToBoxAdapter(
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(20, 16, 20, 0),
@@ -207,7 +206,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                             ),
                           ),
                           const SizedBox(width: 10),
-                          // Cart
                           Stack(
                             children: [
                               GestureDetector(
@@ -251,7 +249,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                             ],
                           ),
                           const SizedBox(width: 10),
-                          // Logout
                           GestureDetector(
                             onTap: () async {
                               await AuthService().logout();
@@ -283,7 +280,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 ),
               ),
 
-              // ── Search Bar ────────────────────────────────────
               SliverToBoxAdapter(
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
@@ -330,7 +326,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 ),
               ),
 
-              // ── Sliding Banners ───────────────────────────────
               SliverToBoxAdapter(
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
@@ -446,7 +441,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 ),
               ),
 
-              // ── Categories ────────────────────────────────────
               SliverToBoxAdapter(
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(20, 20, 0, 0),
@@ -510,7 +504,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 ),
               ),
 
-              // ── Foods Header ──────────────────────────────────
               SliverToBoxAdapter(
                 child: Padding(
                   padding:
@@ -554,7 +547,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 ),
               ),
 
-              // ── Food Grid ─────────────────────────────────────
               _filteredFoods.isEmpty
                   ? SliverToBoxAdapter(
                       child: Center(
@@ -606,7 +598,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   }
 }
 
-// ── Food Card ────────────────────────────────────────────────────
 class FoodCard extends ConsumerWidget {
   final FoodItem food;
   final int crossAxisCount;
@@ -743,7 +734,6 @@ class FoodCard extends ConsumerWidget {
       );
     }
 
-    // Grid view
     return GestureDetector(
       onTap: () => Navigator.push(
           context,
