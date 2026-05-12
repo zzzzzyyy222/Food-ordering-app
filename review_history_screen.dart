@@ -1,4 +1,3 @@
-// lib/screens/reviews/review_history_screen.dart
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -99,7 +98,6 @@ class ReviewHistoryScreen extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(height: 8),
-                      // Star rating
                       Row(
                         children: [
                           ...List.generate(
@@ -122,7 +120,6 @@ class ReviewHistoryScreen extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(height: 8),
-                      // Comment
                       Container(
                         width: double.infinity,
                         padding: const EdgeInsets.all(12),
