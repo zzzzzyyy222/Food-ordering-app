@@ -1,4 +1,3 @@
-// lib/providers/cart_provider.dart
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/food_item.dart';
 
@@ -34,7 +33,6 @@ class CartNotifier extends StateNotifier<List<CartItem>> {
     }
   }
 
-  // Decrease quantity or remove if 0
   void removeItem(String itemId) {
     final index = state.indexWhere((e) => e.foodItem.id == itemId);
     if (index >= 0) {
@@ -53,14 +51,11 @@ class CartNotifier extends StateNotifier<List<CartItem>> {
     }
   }
 
-  // Clear entire cart
   void clearCart() => state = [];
 
-  // Total price
   double get totalPrice =>
       state.fold(0, (sum, e) => sum + e.foodItem.price * e.quantity);
 
-  // Total number of items
   int get totalItems =>
       state.fold(0, (sum, e) => sum + e.quantity);
 }
