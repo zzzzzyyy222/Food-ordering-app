@@ -1,14 +1,12 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/food_item.dart';
 
-// Represents one item in the cart
 class CartItem {
   final FoodItem foodItem;
   final int quantity;
 
   CartItem({required this.foodItem, this.quantity = 1});
 
-  // Creates a copy with updated quantity
   CartItem copyWith({int? quantity}) {
     return CartItem(foodItem: foodItem, quantity: quantity ?? this.quantity);
   }
@@ -17,7 +15,6 @@ class CartItem {
 class CartNotifier extends StateNotifier<List<CartItem>> {
   CartNotifier() : super([]);
 
-  // Add item or increase quantity
   void addItem(FoodItem item) {
     final index = state.indexWhere((e) => e.foodItem.id == item.id);
     if (index >= 0) {
