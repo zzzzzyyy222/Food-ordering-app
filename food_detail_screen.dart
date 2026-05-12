@@ -1,4 +1,3 @@
-// lib/screens/home/food_detail_screen.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../models/food_item.dart';
@@ -182,7 +181,6 @@ class _FoodDetailScreenState extends ConsumerState<FoodDetailScreen> {
             ),
           ),
 
-          // ── Add to Cart Button ────────────────────────────────
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
@@ -223,7 +221,6 @@ class _FoodDetailScreenState extends ConsumerState<FoodDetailScreen> {
             ),
           ),
 
-          // ── Write Review ──────────────────────────────────────
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
@@ -312,7 +309,6 @@ class _FoodDetailScreenState extends ConsumerState<FoodDetailScreen> {
             ),
           ),
 
-          // ── Reviews List ──────────────────────────────────────
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.fromLTRB(20, 0, 20, 30),
