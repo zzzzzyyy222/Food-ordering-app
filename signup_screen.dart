@@ -1,4 +1,3 @@
-// lib/screens/auth/signup_screen.dart
 import 'package:flutter/material.dart';
 import '../../services/auth_service.dart';
 import 'login_screen.dart';
@@ -63,7 +62,6 @@ class _SignupScreenState extends State<SignupScreen> {
         child: Column(
           children: [
 
-            // ── Top Banner ───────────────────────────────────────
             Container(
               width: double.infinity,
               decoration: const BoxDecoration(
@@ -121,7 +119,6 @@ class _SignupScreenState extends State<SignupScreen> {
               ),
             ),
 
-            // ── Signup Form ──────────────────────────────────────
             Padding(
               padding: const EdgeInsets.all(24),
               child: Column(
@@ -141,7 +138,6 @@ class _SignupScreenState extends State<SignupScreen> {
                   ),
                   const SizedBox(height: 20),
 
-                  // Full Name
                   const Text('Full Name',
                       style:
                           TextStyle(fontWeight: FontWeight.w600)),
@@ -174,7 +170,6 @@ class _SignupScreenState extends State<SignupScreen> {
 
                   const SizedBox(height: 14),
 
-                  // Email
                   const Text('Email',
                       style:
                           TextStyle(fontWeight: FontWeight.w600)),
@@ -252,7 +247,6 @@ class _SignupScreenState extends State<SignupScreen> {
 
                   const SizedBox(height: 24),
 
-                  // Signup button
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
@@ -281,7 +275,6 @@ class _SignupScreenState extends State<SignupScreen> {
 
                   const SizedBox(height: 18),
 
-                  // Login link
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
