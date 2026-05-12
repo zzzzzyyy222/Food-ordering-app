@@ -1,4 +1,3 @@
-// lib/screens/profile/profile_screen.dart
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../../services/firestore_service.dart';
@@ -180,7 +179,6 @@ class ProfileScreen extends StatelessWidget {
           return CustomScrollView(
             slivers: [
 
-              // ── Header ──────────────────────────────────────
               SliverToBoxAdapter(
                 child: Container(
                   decoration: const BoxDecoration(
@@ -224,7 +222,6 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ),
 
-              // ── Points Card ──────────────────────────────────
               SliverToBoxAdapter(
                 child: Padding(
                   padding: const EdgeInsets.all(16),
@@ -454,7 +451,6 @@ class ProfileScreen extends StatelessWidget {
               const SliverToBoxAdapter(
                   child: SizedBox(height: 16)),
 
-              // ── Menu Items ───────────────────────────────────
               SliverToBoxAdapter(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
