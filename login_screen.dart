@@ -1,4 +1,3 @@
-// lib/screens/auth/login_screen.dart
 import 'package:flutter/material.dart';
 import '../../services/auth_service.dart';
 import 'forgot_password_screen.dart';
@@ -68,7 +67,6 @@ class _LoginScreenState extends State<LoginScreen> {
               mainAxisSize: MainAxisSize.min,
               children: [
 
-                // ── Top Banner ─────────────────────────────
                 Container(
                   width: double.infinity,
                   padding: const EdgeInsets.symmetric(
@@ -135,7 +133,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
 
-                // ── Login Form ─────────────────────────────
                 Padding(
                   padding: const EdgeInsets.fromLTRB(
                       24, 20, 24, 24),
@@ -195,7 +192,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
                       const SizedBox(height: 14),
 
-                      // Password
                       const Text('Password',
                           style: TextStyle(
                               fontWeight: FontWeight.w600)),
@@ -240,7 +236,6 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
 
-                      // Forgot password
                       Align(
                         alignment: Alignment.centerRight,
                         child: TextButton(
@@ -258,7 +253,6 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
 
-                      // Login button
                       SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(
@@ -291,7 +285,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
                       const SizedBox(height: 20),
 
-                      // Divider
                       Row(
                         children: [
                           Expanded(
@@ -316,7 +309,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
                       const SizedBox(height: 20),
 
-                      // Sign up link
                       Row(
                         mainAxisAlignment:
                             MainAxisAlignment.center,
