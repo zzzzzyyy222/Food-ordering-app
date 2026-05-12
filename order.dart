@@ -1,5 +1,3 @@
-// lib/models/order.dart
-
 enum OrderStatus { pending, confirmed, preparing, onTheWay, delivered }
 
 class Order {
