@@ -5,7 +5,6 @@ class FirestoreService {
   final FirebaseFirestore _db = FirebaseFirestore.instance;
   final String? userId = FirebaseAuth.instance.currentUser?.uid;
 
-  // ── Voucher Tiers ────────────────────────────────────────────
   static const Map<String, int> voucherTiers = {
     'LITE':  50,
     'PLUS':  70,
@@ -22,7 +21,6 @@ class FirestoreService {
     'ELITE': '50% OFF',
   };
 
-  // ── Orders ───────────────────────────────────────────────────
   Future<String> saveOrder(
     List<Map<String, dynamic>> items,
     double total, {
@@ -55,7 +53,6 @@ class FirestoreService {
             snap.docs.map((doc) => doc.data()).toList());
   }
 
-  // ── Reviews ──────────────────────────────────────────────────
   Future<void> saveReview(String foodId, String foodName,
       double rating, String comment) async {
     await _db.collection('reviews').add({
@@ -80,7 +77,6 @@ class FirestoreService {
             snap.docs.map((doc) => doc.data()).toList());
   }
 
-  // ── Points & Vouchers ────────────────────────────────────────
   Future<void> _addPoints(int points) async {
     final userRef = _db.collection('users').doc(userId);
     final doc = await userRef.get();
