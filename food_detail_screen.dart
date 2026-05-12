@@ -78,7 +78,6 @@ class _FoodDetailScreenState extends ConsumerState<FoodDetailScreen> {
       backgroundColor: const Color(0xFFF8F8F8),
       body: CustomScrollView(
         slivers: [
-          // ── Image Header ──────────────────────────────────────
           SliverAppBar(
             expandedHeight: 280,
             pinned: true,
@@ -97,7 +96,6 @@ class _FoodDetailScreenState extends ConsumerState<FoodDetailScreen> {
             ),
           ),
 
-          // ── Food Info ─────────────────────────────────────────
           SliverToBoxAdapter(
             child: Container(
               decoration: const BoxDecoration(
@@ -137,7 +135,6 @@ class _FoodDetailScreenState extends ConsumerState<FoodDetailScreen> {
                       style: TextStyle(
                           color: Colors.grey.shade600, fontSize: 14)),
                   const SizedBox(height: 16),
-                  // Price + Quantity
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -262,7 +259,6 @@ class _FoodDetailScreenState extends ConsumerState<FoodDetailScreen> {
                       }),
                     ),
                     const SizedBox(height: 12),
-                    // Comment box
                     Container(
                       decoration: BoxDecoration(
                         color: Colors.grey.shade50,
